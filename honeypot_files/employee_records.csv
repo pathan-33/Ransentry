@@ -1,0 +1,5 @@
+Employee_ID,Full_Name,Department,Role_Title,Email_Address,Access_Level
+EMP-1001,Alexander Vance,Cyber Security,Chief Information Security Officer,a.vance@enterprise.org,Level-5 Admin
+EMP-1002,Sophia Martinez,SOC Incident Response,Lead Threat Analyst,s.martinez@enterprise.org,Level-4 Analyst
+EMP-1003,Marcus Chen,Infrastructure,Senior Network Engineer,m.chen@enterprise.org,Level-4 Sysadmin
+EMP-1004,Emily Watson,Compliance & Audit,Security Auditor,e.watson@enterprise.org,Level-3 Auditor

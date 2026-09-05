@@ -1,0 +1,24 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*.class
+
+# PyInstaller & Build artifacts (CRITICAL: dist/Ransomware.exe is >100MB and rejected by GitHub)
+build/
+dist/
+*.spec.bak
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# IDE files
+.vscode/
+.idea/
+
+# OS-generated metadata
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.BIN/

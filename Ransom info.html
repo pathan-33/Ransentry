@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RANSENTRY | Ransomware Early Warning System</title>
+<style>
+  :root {
+    --bg: #121212;
+    --card: #1e1e1e;
+    --card-border: #333333;
+    --title-purple: #8a5cf6;
+    --heading-green: #2ecc71;
+    --purple-light: #c792ea;
+    --code-bg: #2a2a2a;
+    --text: #e0e0e0;
+    --text-muted: #aaaaaa;
+    --danger: #ff5555;
+    --danger-bg: #2a1414;
+  }
+
+  body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'Segoe UI', Arial, sans-serif;
+    line-height: 1.6;
+    padding: 35px 20px;
+    max-width: 920px;
+    margin: 0 auto;
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--card-border);
+  }
+
+  .header-logo {
+    width: 140px;
+    height: 112px;
+    border-radius: 12px;
+    border: 1px solid var(--card-border);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.6);
+  }
+
+  h1 {
+    color: var(--title-purple);
+    font-size: 2.4rem;
+    font-weight: bold;
+    margin: 0 0 4px 0;
+  }
+
+  .subtitle {
+    color: var(--heading-green);
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin: 0;
+  }
+
+  h2 {
+    color: var(--heading-green);
+    font-size: 1.4rem;
+    border-bottom: 1px solid var(--card-border);
+    padding-bottom: 6px;
+    margin-top: 35px;
+    margin-bottom: 16px;
+  }
+
+  p {
+    margin-bottom: 16px;
+  }
+
+  code {
+    background: var(--code-bg);
+    color: var(--purple-light);
+    font-family: 'Consolas', 'Courier New', monospace;
+    padding: 2px 6px;
+    border-radius: 4px;
+  }
+
+  .feature-grid, .team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 16px;
+    margin-top: 16px;
+  }
+
+  .feature-card, .team-card {
+    background: var(--card);
+    border: 1px solid var(--card-border);
+    border-radius: 8px;
+    padding: 16px;
+  }
+
+  .feature-card strong {
+    color: var(--heading-green);
+    display: block;
+    margin-bottom: 6px;
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 15px;
+    background: var(--card);
+  }
+
+  th, td {
+    border: 1px solid var(--card-border);
+    padding: 10px 14px;
+    text-align: left;
+  }
+
+  th {
+    background: #1e1e1e;
+    color: var(--purple-light);
+    font-weight: bold;
+  }
+
+  tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.02);
+  }
+
+  .policy-box {
+    border-left: 4px solid var(--heading-green);
+    background: #18261e;
+    padding: 12px 16px;
+    margin-top: 16px;
+    border-radius: 4px;
+  }
+
+  .warn {
+    border-left: 4px solid var(--danger);
+    background: var(--danger-bg);
+    padding: 16px;
+    margin-top: 36px;
+    border-radius: 4px;
+  }
+
+  .warn strong {
+    color: var(--danger);
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  .team-card h3 {
+    color: var(--title-purple);
+    margin: 0 0 4px 0;
+    font-size: 1.15rem;
+  }
+
+  .team-card p {
+    margin: 4px 0;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <img src="ransentry_logo.png" alt="RANSENTRY Logo" class="header-logo">
+  <div>
+    <h1>RANSENTRY</h1>
+    <p class="subtitle">Ransomware Early Warning System &middot; See Threats. Stop Damage. Stay Secure.</p>
+  </div>
+</header>
+
+<p>This utility focuses on a <strong>Ransomware Early Warning System</strong> to identify the initial stages of a ransomware attack (e.g., encryption, defense evasion). It uses a dynamic <strong>risk scoring model with time decay</strong> to track suspicious activities on a simulated endpoint and visualize the threat level in real-time using an embedded <strong>Matplotlib graph</strong>.</p>
+
+<h2>Core Features</h2>
+<div class="feature-grid">
+  <div class="feature-card">
+    <strong>Heuristic Risk Model</strong>
+    Uses a defined set of actions (e.g., <code>Encrypting_Operation</code>, <code>Delete_Backups</code>) assigned to high-risk scores.
+  </div>
+  <div class="feature-card">
+    <strong>Time-Decay Engine</strong>
+    Individual risk events expire after a 10-second window, simulating that suspicion fades if anomalous activity does not continue.
+  </div>
+  <div class="feature-card">
+    <strong>Real-time Visualization</strong>
+    Embeds a Matplotlib graph that plots the accumulated risk score over time.
+  </div>
+  <div class="feature-card">
+    <strong>Attack Simulation Modes</strong>
+    Normal (low, sporadic risk) and Malicious (high-risk sequence typical of ransomware execution).
+  </div>
+  <div class="feature-card">
+    <strong>Critical Alerts</strong>
+    Dynamic indicator shows SAFE, HIGH RISK, or RANSOMWARE ATTACK once the score exceeds the threshold (150).
+  </div>
+  <div class="feature-card">
+    <strong>Color-Coded Logging</strong>
+    Activity log highlights severity of each simulated event in real time.
+  </div>
+</div>
+
+<h2>Advanced System Modules</h2>
+<div class="feature-grid">
+  <div class="feature-card">
+    <strong>Honeypot Deception Environment</strong>
+    Deploys monitored decoy assets in <code>honeypot_files/</code> watching for unauthorized access or modification via Python <code>watchdog</code>.
+  </div>
+  <div class="feature-card">
+    <strong>Cryptographic Hash-Chain Log</strong>
+    SHA-256 block chain logging providing tamper-evident audit trails and cryptographic integrity verification.
+  </div>
+  <div class="feature-card">
+    <strong>Live Threat Intelligence Feed</strong>
+    Fetches real-time URLhaus ransomware indicators and dynamically adjusts alert sensitivity multipliers.
+  </div>
+  <div class="feature-card">
+    <strong>AI Adaptive Pattern Recognition</strong>
+    Random Forest Classifier evaluating operational sequences over rolling 20-action windows.
+  </div>
+  <div class="feature-card">
+    <strong>Interactive SOC Incident Dispatcher</strong>
+    Configurable P1/P2 alert dispatcher sending structured JSON payloads to Tier-2 SOC response teams.
+  </div>
+  <div class="feature-card">
+    <strong>Dynamic 3-Tier Security Quiz</strong>
+    Easy, Medium, and Hard interactive quizzes with instant Red/Green option feedback and live scoring.
+  </div>
+</div>
+
+<h2>Technologies & Libraries</h2>
+<p><code>Python 3.x</code> &middot; <code>tkinter</code> &amp; <code>ttkbootstrap</code> &middot; <code>Matplotlib</code> &middot; <code>FigureCanvasTkAgg</code> &middot; <code>scikit-learn</code> &middot; <code>watchdog</code> &middot; <code>requests</code> &middot; <code>threading &amp; queue</code> &middot; <code>hashlib</code></p>
+
+<h2>Behavioral Risk Heuristics</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Behavioral Action</th>
+      <th>Risk Score</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>Security_Disable</code></td>
+      <td>100</td>
+      <td>Critical event (e.g., disabling anti-virus).</td>
+    </tr>
+    <tr>
+      <td><code>Delete_Backups</code></td>
+      <td>75</td>
+      <td>Highly malicious (attempting to prevent recovery).</td>
+    </tr>
+    <tr>
+      <td><code>Encrypting_Operation</code></td>
+      <td>50</td>
+      <td>Strong indication of file modification/locking.</td>
+    </tr>
+    <tr>
+      <td><code>File_Rename_Op</code></td>
+      <td>25</td>
+      <td>Suspicious file operation pattern.</td>
+    </tr>
+    <tr>
+      <td><code>Mass_File_Read</code></td>
+      <td>10</td>
+      <td>Precursor to encryption (reconnaissance/copy).</td>
+    </tr>
+    <tr>
+      <td><code>Normal_Modify</code></td>
+      <td>2</td>
+      <td>Standard user file editing/saving.</td>
+    </tr>
+    <tr>
+      <td><code>Normal_Access</code></td>
+      <td>1</td>
+      <td>Standard user file viewing.</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="policy-box">
+  <strong>Defense Policy:</strong> RANSOMWARE THRESHOLD is set to 150. Time window for risk decay is 10 seconds.
+</div>
+
+<h2>How to Operate</h2>
+<ol style="padding-left: 20px;">
+  <li style="margin-bottom: 8px;"><strong>Start the Application</strong> — Run <code>python Ransomware.py</code>.</li>
+  <li style="margin-bottom: 8px;"><strong>Start Simulation (Normal)</strong> — Observe low, fluctuating risk scores as benign activity occurs and decays.</li>
+  <li style="margin-bottom: 8px;"><strong>Start Simulation (Malicious)</strong> — The log shows high-risk events; score spikes and the indicator changes to WARNING/DANGER.</li>
+  <li style="margin-bottom: 8px;"><strong>Observe Decay</strong> — Stop the simulation and watch the graph drop back toward zero as events expire.</li>
+  <li style="margin-bottom: 8px;"><strong>Analyze Results</strong> — Use the real-time metrics and graph to review the attack lifecycle and defense efficacy.</li>
+</ol>
+
+<h2>Project Team Members & Roles</h2>
+<div class="team-grid">
+  <div class="team-card">
+    <h3>Choppa Haritha</h3>
+    <p><strong style="color: var(--heading-green);">Employee ID: ST#IS#9760</strong></p>
+    <p><strong>Role:</strong> Lead EDR System Architect &amp; Threat Analytics Specialist</p>
+  </div>
+  <div class="team-card">
+    <h3>Pathan Basheer Khan</h3>
+    <p><strong style="color: var(--heading-green);">Employee ID: ST#IS#9780</strong></p>
+    <p><strong>Role:</strong> Cybersecurity Developer &amp; Security Awareness Coordinator</p>
+  </div>
+</div>
+
+<div class="warn">
+  <strong>Ethical Use &amp; Disclaimer:</strong>
+  This Ransomware Early Warning System is a training utility designed solely for ethical cybersecurity research, defensive auditing, and demonstration of behavioral threat modeling. It simulates attack patterns in a controlled, self-contained environment and must never be used against unauthorized systems.
+</div>
+
+</body>
+</html>
